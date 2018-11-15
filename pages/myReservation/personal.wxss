@@ -1,0 +1,99 @@
+/* pages/myReservation/personal.wxss */
+.top{
+  display:flex;
+  flex-direction:row;
+  margin-top:20px;
+  margin-left:10%;
+  margin-bottom: 10px;
+  width:80%;
+  background:white;
+  font-size: 16px;
+  color: black;
+}
+.column{
+  margin-right: 20%;
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+}
+.image{
+  width:60px;
+  height:45px;
+  background-color: #ccc;
+  margin-bottom: 5px;
+}
+.buttonLeft{
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 55px;
+  height: 40px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 150px;
+  background: white;
+  margin-bottom: 10px;
+}
+.imageLeft{
+  width: 36px;
+  height: 30px;
+  margin-left: -20%; 
+  margin-top: 5%;
+  background: white;
+}
+.image2{
+  width:80px;
+  height:70px;
+  margin-left:16px;
+  margin-top:8px;
+  margin-bottom:15px;
+  margin-right: 20px;
+  background-color: #ccc
+}
+.text1{
+  margin-left: 16px;
+  font-size: 18px;
+  color: rgb(10, 0, 0);
+}
+.view-left{
+  display:flex;
+  flex-direction:column;
+  margin-left: 5%;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.view-right{
+  display:flex;
+  flex-direction:column;
+  width: 30%;
+  text-align: center;
+  margin-right: 5%;
+  margin-bottom: 15px;
+}
+.image3{
+  width:85px;
+  height: 80px;
+  margin-left:16px;
+  margin-top: 25px;
+  margin-right: 16px;
+  background-color: #ccc
+}
+.text2{
+  display:flex;
+  flex-direction:row;
+  margin-top:10px;
+  margin-left: 16px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.image4{
+  width:50px;
+  height:40px;
+  background-color: #ccc;
+  margin-bottom: 5px;
+  margin-top:-10px;
+}

@@ -1,0 +1,35 @@
+/* pages/Main/Main.wxss */
+.welcome {
+  margin-top: 16%;
+  /* margin-left:30%; */
+  font-size: 38px;
+  text-align: center;
+}
+
+.button1{
+  margin-top: 25%;
+  margin-left:27%;
+  width: 46%;
+  font-size: 17px;
+  background-color: rgb(108, 205, 212);
+  color: white;
+  border-radius: 10px;
+}
+
+.button2{
+  margin-top: 12%;
+  margin-left:27%;
+  width: 46%;
+  font-size: 17px;
+  background-color: rgb(243, 234, 234);
+  border-radius: 10px;
+}
+
+.button3{
+  margin-top: 12%;
+  margin-left:27%;
+  width: 46%;
+  font-size: 17px;
+  background-color: rgb(243, 234, 234);
+  border-radius: 10px;
+}

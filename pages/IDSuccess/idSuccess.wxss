@@ -1,0 +1,31 @@
+/* pages/IDSuccess/idSuccess.wxss */
+.content{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 40%;
+  font-size: 18px;
+  text-align: justify;
+  color: black;
+}
+.buttonLeft{
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 55px;
+  height: 40px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 150px;
+  background: white;
+  margin-bottom: 10px;
+}
+.imageLeft{
+  width: 36px;
+  height: 30px;
+  margin-left: -20%; 
+  margin-top: 5%;
+  background: white;
+
+}

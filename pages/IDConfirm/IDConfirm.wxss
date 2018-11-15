@@ -1,0 +1,118 @@
+/* pages/IDConfirm/IDConfirm.wxss */
+.button{
+  width: 160px;
+  background-color: white;
+  border-width: 2px 2px 2px 2px;
+  border-color: black;
+  border-radius: 4px;
+  height: 160px;
+}
+.faceUpLoad{
+  margin-top: 1%;
+  margin-left: 30%;
+  width: 40%;
+  border-radius: 6px;
+  background-color: rgb(134, 223, 230);
+  font-size: 15px;
+  color: white;
+  height: 8%;
+}
+.idUpLoad{
+  margin-top: 1%;
+  margin-left: 30%;
+  width: 40%;
+  border-radius: 6px;
+  background-color: rgb(139, 219, 189);
+  font-size: 15px;
+  color: white;
+  height: 8%;
+}
+.idDisplay{
+  margin-top: 3%;
+  margin-left: 20%;
+  /* margin-top: 1%; */
+  width: 230px;
+  height: 160px;
+  background-color: white;
+  border-width: 2px 2px 2px 2px;
+  border-color: black;
+  border-radius: 4px;
+}
+.changeInfo{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 10%;
+}
+.Phone{
+  height:32px;
+  width: 50%;
+  background: rgb(139, 219, 189);
+  font-size: 15px;
+  border-radius: 4px;
+  border-width: 3px 3px;
+  border-color: black;
+  color: black;
+  margin-left: 25%;
+  margin-top: 3%;
+  text-align: center
+}
+.Code{
+  margin-left: 10%;
+  margin-top: 3%;
+  height:12%;
+  width: 45%;
+  background: rgb(240, 211, 211);
+  font-size: 15px;
+  border-radius: 4px;
+  border-width: 3px 3px;
+  border-color: black;
+  color: black;
+}
+.codeBtn{
+  margin-left: 60%;
+  position: absolute;
+  color: rgb(48, 36, 36);
+  width: 32%;
+  font-size: 15px;
+  height: 6%;
+  background: rgb(139, 219, 189);
+  border-radius: 4px;
+  border-width: 3px 3px;
+  border-color: black;
+}
+.changeBtn{
+  margin-top: 4%;
+  width: 40%;
+  height: 45px;
+  background: rgb(245, 228, 228);
+  color: #000;
+  border-radius: 3px;
+  border-width: 5px 5px;
+  border-color: black;
+  font-size: 18px;
+}
+.buttonLeft{
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 55px;
+  height: 40px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 150px;
+  background: white;
+  margin-bottom: 10px;
+}
+.imageLeft{
+  width: 36px;
+  height: 30px;
+  margin-left: -20%; 
+  margin-top: 5%;
+  background: white;
+
+}

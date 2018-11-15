@@ -1,0 +1,13 @@
+<!--pages/ShopList/List.wxml-->
+<import src='../template/template.wxml'/><!--导入模板-->
+<!-- <template is="tabbar" data="{{tabbar}}"/> -->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+ 
+<text style='margin-left:10px'>北京市</text>
+<view>
+   <view wx:for="{{shop_arrays}}">
+      <template is="shoplist" data="{{id:item.id,name:item.name,address:item.address,time:item.opentime,path:item.cover_image}}"/>
+   </view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/IDConfirm/IDConfirm.wxml-->
+<!-- 重新拍照按钮 -->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+<view>
+    <button bindtap='backToTakePhoto' class='button'>
+      <image src='{{srcFace}}' mode='scaleToFill' style='margin-top:6%;width:100%;height:90%'></image>
+    </button>
+<!-- 人像上传 -->
+ <button class='faceUpLoad' bindtap='FaceUpLoad'>人像上传</button>
+</view>
+
+<!-- 身份证显示区域 -->
+<view>
+<button class='idDisplay'>
+  <image src='{{srcID}}' mode='scaleToFill' style='margin-top:5%;width:100%;height:90%'></image>
+</button>
+</view>
+<!-- 身份证上传事件 -->
+  <button class='idUpLoad' bindtap='getID'>身份证上传</button>
+
+<!-- 获取手机验证码 -->
+ <view class='Phone'>
+     <input placeholder='请输入注册手机号' bindinput='getPhoneValue' value='{{phone}}' /> 
+ </view>
+   <!-- <button class='codeBtn' bindtap='getVerificationCode' disabled='{{click}}' >{{time}}</button> -->
+   <!-- <view class='Code'>
+     <input placeholder='请输入验证码' bindinput='getCodeValue' value='{{code}}'  /> 
+  </view> -->
+  <button class='changeBtn' bindtap='vetify'>提交验证</button>
+
+
+  

@@ -1,0 +1,40 @@
+/* pages/Subscribe_action/subscribe.wxss */
+.view{
+  border-width:5px;
+  border-color:black; 
+  border-right: 3rpx solid black;
+  border-top: 3rpx solid black;
+  border-left: 3rpx solid black;
+  border-bottom: 3rpx solid black;
+}
+.button{
+  color: white;
+  font-size: 17px;
+  background: rgb(56, 134, 158);
+  margin-top: -10%;
+  margin-bottom: 5%;
+  width: 50%;
+  left: 20%;
+}
+.buttonLeft{
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 55px;
+  height: 40px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 150px;
+  background: white;
+  margin-bottom: 10px;
+}
+.imageLeft{
+  width: 36px;
+  height: 30px;
+  margin-left: -20%; 
+  margin-top: 5%;
+  background: white;
+
+}

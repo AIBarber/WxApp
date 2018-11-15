@@ -1,0 +1,7 @@
+<!--pages/IDSuccess/idSuccess.wxml-->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+<view class='content'>
+  <text>认证请求提交成功，请等待审核通知。</text>
+</view>

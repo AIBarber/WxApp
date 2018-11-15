@@ -1,0 +1,21 @@
+<!-- index.wxml -->
+  <!-- 调用前置摄像机 -->
+<camera device-position="{{position}}" flash="auto" binderror="error" class='cameraArea'>
+</camera>
+
+<!-- 拍照按钮 -->
+<view style='background:white'>
+  <button class='button' bindtap='takePhoto'  hover-class='none'>
+    <icon type="circle" size='70' class='iconCircle' ></icon>
+  </button>
+
+<!-- 左右两个位置 -->
+   <button class='buttonLeft' bindtap='backToprevPage'>
+     <!-- <icon type="circle" size='30' class='iconCircle' ></icon> -->
+       <image src='../../icon/camera_back.png' mode='widthFix' class='imageLeft'></image>
+   </button>
+   <button  class='buttonRight' bindtap='switchCamera'>
+     <!-- <icon type="circle" size='30' class='iconCircle' ></icon> -->
+        <image src='../../icon/camera_rotate.png' mode='widthFix' class='imageRight'></image>
+   </button>
+</view>

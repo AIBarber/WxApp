@@ -1,0 +1,45 @@
+<!--pages/ShopList/shopDetial/detial.wxml-->
+<!-- 店铺详情页面 -->
+
+<!--导入模板-->
+<import src='../template/barber.wxml'/>
+<import src='../template/customer.wxml'/>
+
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+ 
+<text style='margin-left:10px'>北京市</text>
+ <view wx:for="{{shop_detials}}">
+<view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%; width:94%;background:white;' data-id='{{item.id}}'>
+   <image style="width:110px;height:100px;margin-left:3px;margin-top:5px;margin-bottom:1px;" src='{{item.cover_image}}' mode='scaleToFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:17px">
+         <text decode='true' style='margin-top:12px;font-size:18px'>{{item.name}} &nbsp;&nbsp;&nbsp;&nbsp;</text>
+         <text decode='true' style='margin-top:6px'>{{item.square}}平方米&nbsp;&nbsp;&nbsp; {{item.opentime}}</text>
+         <text style='margin-top:6px;'>当前店内人数：{{people_barber+people_cus}}</text> 
+         <text style='margin-top:20px;margin-left:-120px'>店铺地址：{{item.address}}</text> 
+      </view>
+    </view>
+  </view>
+
+<text>\n</text>
+<!-- 引入发型师模板 -->
+<view>
+ <text style='margin-top:5px;font-size:18px;' decode='true' wx:if="{{current_barber!=null}}">&nbsp;&nbsp;当前店内发型师：{{current_barber.length}}人</text>
+   <!-- <view wx:for="{{current_barber}}" wx:if="{{face_id!=null}}"> -->
+   <view wx:for="{{current_barber}}">
+      <template is="barber" data="{{id:item.id,name:item.name,level:item.level,years:item.years,path:item.photo_url,status:item.status,type:item.type}}"/>
+   </view>
+</view>
+
+<text>\n</text>
+
+<!-- 引入顾客模板 -->
+<view>
+ <text style='margin-top:5px;font-size:18px' decode='true' wx:if="{{current_customer!=null}}">&nbsp;&nbsp;当前店内顾客数：{{current_customer.length}}人</text>
+
+   <!-- <view wx:for="{{current_customer}}" wx:if="{{face_id!=null}}"> -->
+   <view wx:for="{{current_customer}}">
+      <template is="customer" data="{{id:item.id,status:item.status,path:item.cover_image,time_limit:item.time_limit}}"/>
+   </view>
+</view>

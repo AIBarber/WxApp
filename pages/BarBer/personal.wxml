@@ -1,0 +1,36 @@
+<!--pages/BarBer/personal.wxml-->
+<import src='../template/personal.wxml'/><!--导入模板-->
+<import src='../template/template.wxml'/><!--导入模板-->
+<!-- <template is="tabbar" data="{{tabbar}}"/> -->
+<template data="{{...myDialog}}" is="dialog" />
+
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+
+<view>
+   <view wx:for="{{barberDetails}}">
+      <template is="barber_info" data="{{id:item.id,level:item.level,yearlimit:item.yearlimit,telephone:item.telephone,path:item.cover_image}}"/>
+   </view>
+</view>
+<text decode='true'>&nbsp;&nbsp;我的预约：</text>
+<view>
+   <view style='display:flex;flex-direction:column;margin-top:5px;margin-left:2%;margin-right:2%;;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;'>
+    <view style="display:flex;flex-direction:row;font-size:15px;background:	#F0F0F0" >
+         <text decode='true' style='margin-top:5px;width:23%;margin-left:30px'>时间 </text>
+         <text style='margin-top:5px;width:23%'>预约人</text> 
+        <text decode='true' style='margin-top:5px;width:23%'>店铺 </text> 
+         <text decode='true' style='margin-top:5px;width:23%'>预约码</text> 
+      </view>
+    </view>
+   <view wx:for="{{reservations}}">
+      <template is="barber_reservations" data="{{id:item.id,name:item.name,address:item.address,phone:item.telephone,time:item.opentime,path:item.cover_image}}"/>
+   </view>
+</view>
+<text>\n</text>
+<text decode='true'>&nbsp;&nbsp;我的订单：{{orders.length}}单</text>
+<view>
+   <view wx:for="{{orders}}">
+      <template is="barber_orders" data="{{id:item.id,name:item.name,address:item.address,phone:item.telephone,time:item.opentime,path:item.cover_image}}"/>
+   </view>
+</view>

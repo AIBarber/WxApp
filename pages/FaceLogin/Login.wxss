@@ -1,0 +1,54 @@
+/**Login.wxss**/
+.cameraArea{
+  margin-top: 5%;
+  width: 90%;
+  height: 380px;
+  margin-left: 5%;
+}
+.iconCircle{
+  margin-top: 10%;
+  border-radius: 25px;
+  background-color: rgb(188, 235, 236);
+}
+.button::after{
+  margin-top: 10%;
+  margin-left:40%;
+  width: 25%;
+  border: none;
+}
+.buttonLeft{
+  margin-top: -23%;
+  margin-left: 10%;
+  width: 20%;
+  height: 80px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 100px;
+}
+.imageLeft{
+  width: 60px;
+  height: 50px;
+  margin-left: -20%; 
+  margin-top: 15%;
+}
+.buttonRight{
+  margin-top: -23%;
+  margin-left: 70%;
+  width: 20%;
+  height: 80px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 100px;
+}
+.imageRight{
+   width: 60px;
+  height: 50px;
+  margin-left: -8%; 
+  margin-top: 10%;
+}

@@ -1,0 +1,25 @@
+<!--pages/Customer_detial/Cdetial.wxml-->
+<!-- 顾客详情页面 -->
+<!-- 引入模板 -->
+<import src='../../template/Customer_detial.wxml'/>
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+ 
+<view>
+   <view wx:for="{{customer_detail}}">
+      <template is="customer_info" data="{{id:item.id,haircut_num:item.haircut_num,path:item.cover_image,condition:item.condition,wash_num:item.wash_num,style_last:item.style_last,time_stay:item.time_stay}}"/>
+   </view>
+</view>
+
+<view style='display:flex;flex-direction:row;'>
+  <button class='button' bindtap='startService'>开始理发</button>
+  <button class='button' bindtap='endService'>结束理发</button>
+</view>
+
+<view>
+ <text style='margin-top:5px;font-size:16px'>历史消费记录</text>
+   <view wx:for="{{cost_list}}">
+      <template is="cost_list" data="{{id:item.id,time:item.time,cost:item.cost,style:item.style,pathS:item.cover_image,pathE:item.cover_image,name:item,name,score:item.score}}"/>
+   </view>
+</view>

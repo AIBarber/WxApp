@@ -1,0 +1,29 @@
+<!--pages/LoginMain/LoginMain.wxml-->
+
+<!--<import src="../template/dialog.wxml"/>
+<template data="{{...myDialog}}" is="dialog" />-->
+
+<view class="container">
+  <view class="title">
+      <text>请拍摄完整清晰的面部照片进行登录</text>
+  </view>
+
+  <view class="content">
+      <text>为了更好的服务，小程序需要进行人脸验证，请点击按钮进行上传面部照片进行登录。</text>
+  </view>
+  <view class="content">
+      <text>面部照片请拍摄正脸，不要有遮挡，光线适中，人脸占据整个图片的60%左右；请避免出现以下情况：</text>
+  </view>
+
+  <view class="tip_image_view">
+      <image class="tip_image" src='../../icon/camera_example.png'></image>
+  </view>
+  
+  <view class="content">
+      <text>小程序需要授权获得你的公开信息（昵称、头像等），仅用于内部使用。</text>
+  </view>
+  <view>
+      <button class='button1' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">授权获取信息并上传照片</button>
+  </view>
+
+</view>

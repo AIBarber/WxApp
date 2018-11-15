@@ -1,0 +1,18 @@
+<!--pages/Subscribe_action/subscribe.wxml-->
+<!-- 顾客选择店铺进行预约 -->
+<import src='../template/shopList_order.wxml'/><!--导入模板-->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+<view class='view'>
+  <view style='margin-bottom:10px;'>
+  <text style='margin-left:5%'>选择店铺</text>
+  <radio-group class="radio-group" bindchange="radioChange">
+        <label  wx:for="{{shopList}}">
+            <template is="shoplist_order" data="{{id:item.id,name:item.name,address:item.address,path:item.cover_image}}"/>
+        </label>   
+  </radio-group>
+  </view>
+  <view style='margin-top:100px;color:red;font-size:17px;margin-left:5%;'>须支付：￥1</view>
+  <button class='button' bindtap='subscribe_Confirm'>确认预约</button>
+</view>

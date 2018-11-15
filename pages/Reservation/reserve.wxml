@@ -1,0 +1,41 @@
+<!--pages/Reservation/reserve.wxml-->
+<!-- 预约页面 -->
+<import src='../template/barber.wxml'/><!--导入模板-->
+ <!-- <view wx:for="{{barberInfo}}"> -->
+ <button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+<view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%; width:94%;background:white;' data-id='{{barberInfo.id}}'>
+   <image style="width:100px;height:90px;margin-left:3px;margin-top:5px;margin-bottom:2px;" src='{{barberInfo.photo_url}}' mode='scaletoFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:18px">
+          <text decode='true' style='margin-top:18px'>级别：{{barberInfo.level}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年限：{{barberInfo.years}}    </text>    
+            <text style='margin-top:8px'>电话：{{barberInfo.mobile}} </text> 
+      </view>
+   </view>
+  <!-- </view> -->
+
+<view style='display:flex;flex-direction:row;margin-top:10px;margin-left:5%;background:white;'>
+  <text>可预约时间：</text>
+  <button class='button' bindtap='goToSubscribe'>立即预约</button>
+</view>
+
+<view>
+   <view style='display:flex;flex-direction:column;margin-top:5px;margin-left:2%;margin-right:2%;;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;'>
+    <view style="display:flex;flex-direction:row;font-size:15px;background:	white" >
+         <text decode='true' style='margin-top:5px;width:32%;margin-left:10px'>上午(12点之前) </text>
+         <text style='margin-top:5px;width:32%'>下午(12:00-18:00)</text> 
+        <text decode='true' style='margin-top:5px;width:32%'>晚上(18点之后) </text>  
+    </view>
+   </view>
+
+    <view wx:for="{{timeToReserve}}">
+      <template is="time_reservations" data="{{id:item.id,morning:item.morning,afternoon:item.afternoon,night:item.night}}"/>
+    </view>
+ </view>
+
+
+<text>\n</text>
+<text style='margin-left:5%;'>他/她的作品：</text>
+ <view wx:for="{{works}}">
+     <template is="barber_works" data="{{id:item.id,time:item.timr,hairstyle:item.hairstyle,score:item.score}}"/>
+ </view>

@@ -1,0 +1,23 @@
+<!--pages/LoginConfirm/LoginConfirm.wxml-->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+<!-- 重新拍照按钮 -->
+  <view>
+    <button bindtap='backToTakePhoto' class='cameraArea'>
+      <image src='{{src}}' mode='widthFix'  style='margin-top:10%;width:100%;height:100%'></image>
+    </button>
+  </view>
+ 
+ <!-- 登录认证按钮 -->
+  <button class='button' wx:if="{{userid==null}}" bindtap='Confirm'>登录认证 </button>
+  <text>\n</text>
+   <view class='tip' wx:if="{{userid==null}}">
+  <text  wx:if="{{flag==1}}">网络错误，请检查网络。</text>
+  <text  wx:if="{{flag==2}}">图片中未包含人像或人像不清晰、不完整，点击上方照片重新拍摄上传；请拍摄正脸，不要有遮挡，光线适中，人脸占据整个图片的80%左右。</text>
+  <text  wx:if="{{flag==3}}">图片文件格式或大小错误，请点击上方照片重新拍摄</text>
+</view>
+
+  
+
+

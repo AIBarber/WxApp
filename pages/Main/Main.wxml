@@ -1,0 +1,20 @@
+<!--pages/Main/Main.wxml-->
+<!-- 首页界面 -->
+  <view class='welcome'>
+     <text>欢迎使用\nV0.1</text>
+  </view>
+
+  <view >
+  <!-- 进入刷脸登录界面 -->
+      <button class='button1' bindtap="Login">刷脸登录</button>
+  </view>
+
+  <view>
+    <!-- 进入刷脸认证界面 -->
+      <button class='button2' bindtap="Identity">刷脸注册</button>
+  </view>
+
+  <view>
+    <!-- 进入非理发师刷脸登录界面 -->
+      <button class='button3' bindtap="ULogin">非理发师刷脸登录</button>
+  </view>

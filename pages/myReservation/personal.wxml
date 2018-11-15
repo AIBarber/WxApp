@@ -1,0 +1,56 @@
+<!--pages/myReservation/personal.wxml-->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+
+ <view style='display:flex;flex-direction:row;font-size:17px;'>
+    <image class='image2' src='{{info.image}}' mode='scaleToFill'/>
+    <view style='display:flex;flex-direction:column;margin-top:16px;'>
+      <text>理发次数：{{info.numbers}}</text>
+      <text>我的积分：{{info.points}}</text>
+    </view>
+ </view>
+
+ <view class='text1'>
+    <text wx:if="{{reservation==null}}">我的预约:</text>
+ </view>
+
+<view class='top'>
+    <view class='column'>
+      <image class='image' src='' mode='scaleToFill'/>
+      <text>时间</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='' mode='scaleToFill'/>
+      <text>理发师</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='' mode='scaleToFill'/>
+      <text>地址</text>
+   </view>
+</view>
+
+<view style='display:flex;flex-direction:row;font-size:16px;'>
+    <view class='view-left'>
+      <text style='margin-top:10px'>颜值：80</text>
+      <text style='margin-top:22px'>脸型：方型</text>
+      <text style='margin-top:22px'>肤色：黄</text>
+    </view>
+     <image class='image3' src='' mode='scaleToFill'/>
+    <view class='view-right'>
+      <text style='margin-top:10px'>年龄：20-25</text>
+      <text style='margin-top:22px'>性别：？</text>
+      <text style='margin-top:22px'>眉眼鼻唇</text>
+    </view>
+ </view>
+
+ <view style='display:flex;flex-direction:column;font-size:17px;'>
+    <view class='text2' bindtap='goToCoupon'>
+      <text style='width:80%;'>我的优惠券：</text>
+      <image class='image4' src='../../icon/camera_back.png' mode='scaleToFill'/>
+    </view>
+    <view class='text2' bindtap='goToConsumption'>
+      <text style='width:80%;'>我的消费记录：</text>
+      <image class='image4' src='../../icon/camera_back.png' mode='scaleToFill'/>
+    </view>
+ </view>
