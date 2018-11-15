@@ -1,0 +1,40 @@
+/**app.wxss**/
+@import "./pages/template/dialog.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.tabbar_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    width: 99%;
+    height: 100rpx;
+    border-top: 1rpx solid black; 
+    border-bottom: 1rpx solid black;  
+    border-right: 1rpx solid black; 
+    border-left: 1rpx solid black; 
+}
+ 
+.tabbar_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    height: 100%;
+}
+ 
+.tabbar_icon{
+    width: 61rpx;
+    height: 61rpx;
+}
+

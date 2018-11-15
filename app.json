@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/ShopList/List",
+    "pages/LoginMain/LoginMain",
+    "pages/FaceLogin/Login",
+    "pages/FaceIdentity/Identity",
+    "pages/UserLogin/ULogin",
+    "pages/LoginConfirm/LoginConfirm",
+    "pages/IDConfirm/IDConfirm",
+    "pages/IDSuccess/idSuccess",
+    "pages/BarBer/personal",
+    "pages/ShopDetial/detial",
+    "pages/Customer_detial/Cdetial",
+    "pages/orderDetail/orderdetail",
+    "pages/Reservation/reserve",
+    "pages/Subscribe_action/subscribe",
+    "pages/ShopList/personal",
+    "pages/subscribe_Success/sub_Success",
+    "pages/myReservation/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AIBarber",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#FFA900",
+    "backgroundColor": "#FAFAFA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/ShopList/List",
+        "text": "门店",
+        "iconPath": "icon/tab_icon_home_default.png",
+        "selectedIconPath": "icon/tab_icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/LoginMain/LoginMain",
+        "text": "个人",
+        "iconPath": "icon/tab_icon_my_default.png",
+        "selectedIconPath": "icon/tab_icon_my_selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": false
+}
