@@ -1,0 +1,35 @@
+<!-- 理发师详情页模板 -->
+<template name='barber_info'>
+   <view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%; width:94%;background:white;' data-id='{{id}}'>
+   <image style="width:100px;height:88px;margin-left:6px;margin-top:6px;margin-bottom:6px;" src='{{path}}' mode='scaleToFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px">
+     <text style='margin-top:10px' decode='true'>级别：{{level}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年限{{yearlimit}}</text>   
+     <text style='margin-top:5px'>电话：{{telephone}} </text>     
+      </view>
+   </view>
+</template>
+
+<template name='barber_reservations'>
+ <view style='display:flex;flex-direction:column;margin-top:0px;margin-left:2%;margin-right:2%;;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+      <view style="display:flex;flex-direction:row;font-size:15px;width:90%" >
+      <text decode='true' style='margin-top:5px;width:23%;margin-left:30px'>{{time}}  </text>
+         <text style='margin-top:5px;width:23%'>{{name}}</text> 
+        <text decode='true' style='margin-top:5px;width:23%'>{{shop}} </text> 
+         <text decode='true' style='margin-top:5px;width:23%'>{{code}} </text> 
+      </view>
+    </view>
+</template>
+
+<template name='barber_orders'>
+  <view style='display:flex;flex-direction:row;margin-top:0px;margin-left:2%; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+    <view style="display:flex;flex-direction:column;font-size:15px" >
+    <image style="width:85px;height:70px;margin-left:6px;margin-top:10px;margin-bottom:5px;" src='{{path}}' mode='scaleToFill' />
+    <text decode='true' style='margin-bottom:8px;'>&nbsp;&nbsp;顾客照片</text>
+    </view>
+      <view style="display:flex;flex-direction:column;margin-left:15px;margin-top:5px;font-size:15px" >
+         <text decode='true' style='margin-top:15px'>时间{{time}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金额：{{money}}元</text>
+         <text decode='true' style='margin-top:6px'>发型{{style}}&nbsp;&nbsp;&nbsp;时长{{lengthOftime}}</text> 
+           <text decode='true' style='margin-top:6px;margin-bottom:5px;'>评分：{{score}} </text> 
+      </view>
+    </view>
+</template>

@@ -1,0 +1,33 @@
+<!--pages/subscribe_Success/sub_Success.wxml-->
+<!-- 预约成功页面 -->
+<!-- 预约信息 -->
+<button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+ </button>
+<view class='top'>
+    <view class='column'>
+      <image class='image' src='' mode='scaleToFill'/>
+      <text>时间</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='' mode='scaleToFill'/>
+      <text>理发师</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='' mode='scaleToFill'/>
+      <text>地址</text>
+   </view>
+</view>
+
+<!-- 预约码 -->
+<view class='code'>
+  <text>预约码：{{}}\n</text>
+</view>
+<view class='text_center'>
+  <text>预约成功，请到我的页面查看。</text>
+</view>
+
+<button class='button' bindtap='goToSelf'>查看预约</button>
+<view class='text_bottom'>
+  <text>当前版本预约时，暂不选择发型</text>
+</view>

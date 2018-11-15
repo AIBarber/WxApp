@@ -1,0 +1,15 @@
+<!-- 顾客模板 -->
+<template name='customer'>
+<navigator url='../Customer_detial/Cdetial?customer_id={{id}}'>
+   <view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <image style="width:90px;height:80px;margin-left:6px;margin-top:10px;margin-bottom:10px;" src='{{path}}' mode='scaleToFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px">
+      <text style='margin-top:16px;' wx:if="{{status==3}}">状态：洗发中 </text> 
+      <text style='margin-top:16px;' wx:if="{{status==4}}">状态：理发中 </text> 
+      <text style='margin-top:16px;' wx:if="{{status==5}}">状态：等待中 </text> 
+      <text style='margin-top:16px;' wx:if="{{status!=3 && status!=4 && status!=5}}">状态： </text> 
+     <text style='margin-top:8px'>进店时长：{{time_stay}} </text>     
+      </view>
+   </view>
+   </navigator>
+</template>

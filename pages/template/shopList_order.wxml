@@ -1,0 +1,13 @@
+<!-- 顾客进行店铺预约模板 -->
+<template name='shoplist_order'> 
+   <view style='display:flex;flex-direction:row;margin-top:0px;margin-left:2%; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <image style="width:90px;height:80px;margin-left:6px;margin-top:10px;margin-bottom:10px;" src='{{path}}' mode='scaletoFill' />
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px" >
+         <text decode='true' style='margin-top:20px'>{{name}} </text>
+         <view style='display:flex;flex-direction:row'>
+         <text style='margin-top:8px;margin-right:10px'>地址：{{address}}</text> 
+          </view>
+          <radio value="{{id}}" style='width: 60rpx; height: 60rpx; line-height: 50rpx; text-align: center;  background: transparent;transform:translate(-50%, -50%) scale(1); -webkit-transform:translate(-50%, -50%) scale(1);margin-left:220px;margin-top:-40px'></radio>
+      </view>
+    </view>
+</template>

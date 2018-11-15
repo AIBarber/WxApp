@@ -1,0 +1,31 @@
+<!--弹窗-->
+<template name="wxdialog">
+  <block>
+    <view class="popui__modal-panel" wx:if="{{showModalStatus}}">
+      <view wx:if="{{shade}}" class="popui__modal-mask" data-shadeClose="{{shadeClose}}" catchtap="hideModal"></view>
+      <view class="popui__panel-main">
+        <view class="popui__panel-section">
+          <view class="popui__panel-child anim-{{anim}} {{skin ? 'popui__' + skin : ''}}" style="{{style}}">
+            <!-- //标题区 -->
+            <view class="popui__panel-tit" wx:if="{{title}}">{{title}}</view>
+            <!-- //内容区 -->
+            <view class="popui__panel-cnt">
+              <view wx:if="{{skin == 'toast' && icon}}" class="popui__toast-icon"><icon type="{{icon}}" size="30" color="#fff" /></view>
+              {{content}}
+            </view>
+            <!-- //按钮区 -->
+            <block wx:if="{{btns}}">
+              <view class="popui__panel-btnwrap">
+                <view class="popui__panel-btn">
+                  <block wx:for="{{btns}}">
+                    <text class="btn" bindtap="btnTapped" data-index="{{index}}" style="{{item.style}}">{{item.text}}</text>
+                  </block>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>

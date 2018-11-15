@@ -1,0 +1,25 @@
+<!-- 店铺模板 -->
+<template name='shoplist'> 
+<navigator url='../ShopDetial/detial?shop_id={{id}}'>
+   <view style='display:flex;flex-direction:row;margin-top:0px;margin-left:2%; width:94%;background:white;border-width:5px;border-color:black; border-right: 3rpx solid black;border-top: 3rpx solid black;border-left: 3rpx solid black;border-bottom: 2rpx solid black;' data-id='{{id}}'>
+   <image style="width:110px;height:100px;margin-left:6px;margin-top:12px;margin-bottom:12px;" src='{{path}}' mode='scaleToFill' />
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:15px" >
+         <text decode='true' style='margin-top:24px;font-size:17px'>{{name}} &nbsp;&nbsp;&nbsp;&nbsp; </text>
+         <text style='margin-top:6px'>地址：{{address}}</text> 
+          <!-- <text decode='true' style='margin-top:5px'>{{phone}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{time}}</text>  -->
+           <text decode='true' style='margin-top:6px'>营业时间：{{time}}</text> 
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<!-- 底边tabbar导航模板 -->
+<template name="tabbar">
+    <view class="tabbar_box" style="background-color:{{tabbar.backgroundColor}}; border-top-color:{{tabbar.borderStyle}}; {{tabbar.position == 'top' ? 'top:0' : 'bottom:0'}}">
+        <block wx:for="{{tabbar.list}}" wx:for-item="item" wx:key="index">
+            <navigator class="tabbar_nav" url="{{item.pagePath}}" style="width:{{1/tabbar.list.length*100}}%; color:{{item.selected ? tabbar.selectedColor : tabbar.color}}" open-type="navigate">
+                <text style='font-size:18px'>{{item.text}}</text>
+            </navigator>
+        </block>
+    </view>
+</template>

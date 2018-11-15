@@ -1,0 +1,45 @@
+<!-- 理发师模板 -->
+<template name='barber'>
+ <view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%;margin-bottom:0px; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <image style="width:100px;height:90px;margin-left:6px;margin-top:12px;margin-bottom:12px;" src='{{path}}' mode='scaleToFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px">
+         <text decode='true' style='margin-top:15px'>名称：{{name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</text>
+         <view style='display:flex;flex-direction:row'>
+          <text decode='true' style='margin-top:6px'>级别：{{level}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年限：{{years}}  &nbsp;&nbsp; </text> 
+         </view>
+         <view style='display:flex;flex-direction:row'>
+             <text style='margin-top:6px;' wx:if="{{status==3}}">状态：洗发中 </text> 
+             <text style='margin-top:6px;' wx:if="{{status==4}}">状态：理发中 </text> 
+             <!-- <text style='margin-top:6px;' wx:if="{{status==5}}">状态：空闲中 </text>  -->
+             <text style='margin-top:6px;' wx:if="{{status!=3 && status!=4 }}">状态：空闲中  </text>
+             <!-- <navigator url='/pages/Reservation/reserve?barberid={{id}}' wx:if="{{type==2}}"><button style='color:white;background:green;width:60px;height:33px;right:-100%;font-size:14px;margin-top:0px'>预约</button></navigator> -->
+             <navigator url='/pages/Reservation/reserve?barberid={{id}}'><button style='color:white;background:green;width:60px;height:33px;right:-100%;font-size:14px;margin-top:0px'>预约</button></navigator>
+         </view>
+          
+      </view>
+   </view>
+</template>
+
+<template name='time_reservations'>
+ <view style='display:flex;flex-direction:column;margin-top:5px;margin-left:2%;margin-right:2%;;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+      <view style="display:flex;flex-direction:row;font-size:15px;background:lightgrey" >
+      <text decode='true' style='margin-top:5px;width:32%;margin-left:10px' bindtap='saveTime'>{{morning}}  </text>
+         <text style='margin-top:5px;width:32%' bindtap='saveTime'>{{afternoon}}</text> 
+        <text decode='true' style='margin-top:5px;width:32%' bindtap='saveTime'>{{night}} </text>  
+      </view>
+    </view>
+</template>
+
+
+<template name='barber_works'>
+<navigator url='/pages/orderDetail/orderdetail?orderid={{id}}'>
+  <view style='display:flex;flex-direction:row;margin-top:0px;margin-left:2%; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <image style="width:80px;height:70px;margin-left:6px;margin-top:10px;margin-bottom:6px;" src='{{path}}' mode='scaletoFill' />顾客照片
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:15px" > 
+         <text decode='true' style='margin-top:5px'>{{time}} </text>   
+         <text decode='true' style='margin-top:5px'>{{hairstyle}}</text> 
+           <text decode='true' style='margin-top:5px'>评分：{{score}} </text> 
+      </view>
+    </view>
+  </navigator>
+</template>
